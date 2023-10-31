@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="index.css" media="screen">
+  <title>Curso de ingles</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+  <script src="app.js" type="module"></script>
+</head>
+
+<body>
+  <div>
+    <h1 id="titulo">Curso de Ingles</h1>
+  </div>
+  <form action="">
+    <fildset>
+      <legend>Pessoa</legend>
+      <div class="dados">
+        <label for="email"><strong>Id.</strong></label>
+        <input type="number" name="id" id="iptId" required>
+      </div>
+      <div class="dados">
+        <label for="nome"><strong>Nome.</strong></label>
+        <input type="text" name="nome" id="iptNome" required>
+      </div>
+      <div class="dados">
+        <label for="email"><strong>Email.</strong></label>
+        <input type="email" name="email" id="iptEmail" required>
+      </div>
+      <div class="dados">
+        <label for="role"><strong>Role.</strong></label>
+        <input type="text" name="role" id="iptRole" required>
+      </div>
+    </fildset>
+    <fildset>
+      <legend>Matricula</legend>
+      <div class="dados">
+        <label for="idMatricula"><strong>Id. Matricula</strong></label>
+        <input type="number" name="idMatricula" id="iptIdMatricula" required>
+      </div>
+      <div class="dados">
+        <label for="status"><strong>Status.</strong></label>
+        <input type="text" name="status" id="iptStatus" required>
+      </div>
+      <div class="dados">
+        <label for="estudanteId"><strong>Estudante ID.</strong></label>
+        <input type="email" name="estudanteId" id="iptEstudanteId" required>
+      </div>
+      <div class="dados">
+        <label for="turmaId"><strong>Turma ID.</strong></label>
+        <input type="text" name="turmaId" id="iptTurmaId" required>
+      </div>
+    </fildset>
+
+  </form>
+  <div id="grupoBotoes">
+    <button type="button" class="btn botoes" id="btnAdiciona">Adicionar</button>
+    <button type="button" class="btn botoes" id="btnBuscaTodos">Busca Todos</button>
+    <button type="button" class="btn botoes" id="btnBuscaPorId">Busca p/ Id</button>
+    <button type="button" class="btn botoes" id="btnAtualiza">Atualiza</button>
+    <button type="button" class="btn botoes" id="btnExclui">Exclui</button>
+    <button type="button" class="btn botoes" id="btnBuscaPorMatricula">Busca p/ Matricula</button>
+
+
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th id="id">Codigo</th>
+        <th id="nome">Nome</th>
+        <th id="email">Email</th>
+        <th id="role">Role</th>
+        <th id="idMatricula">Cod. Matricula</th>
+        <th id="ativo">Status</th>
+        <th id="idTurma">Turma ID</th>
+      </tr>
+    </thead>
+
+    <tbody id="tabelaLista">
+      <tr class="itemDaLista">
+
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
